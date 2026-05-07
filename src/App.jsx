@@ -64,7 +64,7 @@ export default function Portfolio() {
       <section className="py-24 px-6">
         <h2 className="text-3xl font-semibold mb-10 text-center">Skills</h2>
         <div className="flex justify-center gap-4 flex-wrap max-w-2xl mx-auto">
-          {["Python (Basic)", "HTML", "CSS", "JavaScript", "React"].map((s, index) => (
+          {["Python (Basic)", "HTML", "CSS"].map((s, index) => (
             <motion.span
               whileHover={{ scale: 1.1 }}
               key={s}
