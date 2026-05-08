@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaHackerrank } from "react-icons/fa";
+import { FaGithub, FaHackerrank, FaKaggle } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { useState } from "react";
 
@@ -123,6 +123,16 @@ export default function Portfolio() {
             className="hover:text-yellow-400 transition"
           >
             <SiLeetcode />
+          </motion.a>
+
+          <motion.a
+            whileHover={{ scale: 1.2, y: -5 }}
+            href="https://www.kaggle.com/suvomsonalpati"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition"
+          >
+            <FaKaggle />
           </motion.a>
 
           <motion.a
