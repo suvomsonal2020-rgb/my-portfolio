@@ -1,4 +1,4 @@
-```jsx
+
 import { motion } from "framer-motion";
 import { FaGithub, FaHackerrank, FaKaggle } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -309,4 +309,4 @@ export default function Portfolio() {
     </div>
   );
 }
-```
+
