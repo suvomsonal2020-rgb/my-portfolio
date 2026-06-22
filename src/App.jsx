@@ -224,14 +224,21 @@ export default function Portfolio() {
             </div>
           </motion.div>
 
-          {/* Project 2: Snake AI Game */}
+          {/* Project 2: Retro Snake Game */}
           <motion.div
             whileHover={{ scale: 1.02, y: -5 }}
             className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(34,197,94,0.25)] transition duration-500 flex flex-col justify-between"
           >
             <div>
-              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-green-900/30 to-black border border-white/10 flex items-center justify-center">
-                <span className="text-sm opacity-40 text-green-400 font-mono">2D Grid & Game Loop</span>
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center">
+                <img 
+                  src="/snake-game.jpg" 
+                  alt="Retro Snake Game" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
               </div>
 
               <h3 className="text-2xl font-bold text-green-400">
@@ -263,14 +270,21 @@ export default function Portfolio() {
             </div>
           </motion.div>
 
-          {/* Project 3: Tic Tac Toe */}
+          {/* Project 3: Interactive Tic Tac Toe */}
           <motion.div
             whileHover={{ scale: 1.02, y: -5 }}
             className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(234,179,8,0.25)] transition duration-500 flex flex-col justify-between"
           >
             <div>
-              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-yellow-900/30 to-black border border-white/10 flex items-center justify-center">
-                <span className="text-sm opacity-40 text-yellow-400 font-mono">Matrix Evaluation</span>
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center">
+                <img 
+                  src="/tic_tac_toe.jpg" 
+                  alt="Interactive Tic Tac Toe" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
               </div>
 
               <h3 className="text-2xl font-bold text-yellow-400">
@@ -308,8 +322,40 @@ export default function Portfolio() {
             className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition duration-500 flex flex-col justify-between"
           >
             <div>
-              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-purple-900/40 to-cyan-900/40 border border-white/10 flex items-center justify-center">
-                <span className="text-sm opacity-40">Console Application</span>
+              {/* Futuristic Terminal Window Simulation */}
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-black/80 border border-purple-500/30 p-4 font-mono text-[10px] md:text-xs text-purple-400 relative shadow-[inner_0_0_20px_rgba(168,85,247,0.15)] flex flex-col justify-between select-none">
+                {/* Terminal Header */}
+                <div className="absolute top-0 left-0 right-0 h-6 bg-white/5 border-b border-white/10 flex items-center px-3 justify-between">
+                  <div className="flex gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-red-500/60"></span>
+                    <span className="w-2 h-2 rounded-full bg-yellow-500/60"></span>
+                    <span className="w-2 h-2 rounded-full bg-green-500/60"></span>
+                  </div>
+                  <span className="text-[9px] opacity-40 uppercase tracking-widest text-cyan-400">core_system_v4.2</span>
+                </div>
+
+                {/* Simulated Terminal Lines */}
+                <div className="mt-4 space-y-1 flex-1 flex flex-col justify-end opacity-80">
+                  <div className="text-cyan-500/70 text-[9px] font-sans">Last login: {new Date().toLocaleDateString()} on ttys001</div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-purple-500 animate-pulse">⚡</span>
+                    <span className="text-white/40">~</span>
+                    <span className="text-green-400">python3 railway_mgmt.py</span>
+                  </div>
+                  <div className="text-purple-300/60">[SYSTEM] Initializing secure data streams...</div>
+                  <div className="text-cyan-400/80">[DB] Connected to global_transit_matrix.db</div>
+                  <div className="text-emerald-400 flex justify-between">
+                    <span>&gt; Syncing passenger_manifest_blocks...</span>
+                    <span className="text-white/40">[OK]</span>
+                  </div>
+                  <div className="text-purple-400 animate-pulse flex items-center gap-1">
+                    <span>&gt; Fetching PNR schedules</span>
+                    <span className="w-1 h-3 bg-purple-400 inline-block animate-[ping_1s_infinite]"></span>
+                  </div>
+                </div>
+
+                {/* Scanline Overlay Grid Effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/[0.03] to-transparent pointer-events-none bg-[length:100%_4px]"></div>
               </div>
 
               <h3 className="text-2xl font-bold text-purple-400">
@@ -342,7 +388,7 @@ export default function Portfolio() {
           </motion.div>
         </div>
       </section>
-
+      
       {/* Coding Profiles Section */}
       <section className="py-28 px-6">
         <h2 className="text-4xl font-bold mb-14 text-center font-mono">
