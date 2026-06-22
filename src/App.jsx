@@ -160,20 +160,21 @@ export default function Portfolio() {
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Project 1: Student Performance Predictor */}
           <motion.div
             whileHover={{ scale: 1.02, y: -5 }}
-            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] transition duration-500 flex flex-col justify-between"
+            className="h-full border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] transition duration-500 flex flex-col justify-between"
           >
-            <div>
-              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center">
+            <div className="flex-1 flex flex-col">
+              {/* Image Container with subtle dark overlay to blend white screenshots */}
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 relative group">
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-300 pointer-events-none z-10"></div>
                 <img 
                   src="/student-performance.jpg" 
                   alt="Student Performance Predictor" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top filter brightness-[0.95] contrast-[1.05]"
                   onError={(e) => {
-                    // Fallback background color if image isn't placed in public/ folder yet
                     e.target.style.display = 'none';
                   }}
                 />
@@ -183,7 +184,7 @@ export default function Portfolio() {
                 Student Performance Predictor
               </h3>
 
-              <p className="opacity-70 mt-4 text-base leading-relaxed">
+              <p className="opacity-70 mt-4 text-base leading-relaxed flex-1">
                 Developed an end-to-end machine learning application that predicts student math scores using demographic and academic indicators. Built a preprocessing pipeline, trained a Random Forest Regression model using Scikit-learn, and deployed the application using Streamlit Cloud.
               </p>
 
@@ -196,9 +197,9 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mt-8 pt-4 border-t border-white/5">
               <a
-                href="https://github.com/suvomsonal2020-rgb/StudentPerformancePredictor" 
+                href="https://github.com/suvomsonal2020-rgb/my-portfolio" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 text-center px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold text-sm hover:scale-105 transition duration-300"
@@ -219,18 +220,18 @@ export default function Portfolio() {
           {/* Project 2: Railway Management System */}
           <motion.div
             whileHover={{ scale: 1.02, y: -5 }}
-            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition duration-500 flex flex-col justify-between"
+            className="h-full border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition duration-500 flex flex-col justify-between"
           >
-            <div>
+            <div className="flex-1 flex flex-col">
               <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-purple-900/40 to-cyan-900/40 border border-white/10 flex items-center justify-center">
-                <span className="text-sm opacity-40">Console Application</span>
+                <span className="text-sm font-medium tracking-wider uppercase opacity-40 text-purple-300">Console Application</span>
               </div>
 
               <h3 className="text-2xl font-bold text-purple-400">
                 Railway Management System
               </h3>
 
-              <p className="opacity-70 mt-4 text-base leading-relaxed">
+              <p className="opacity-70 mt-4 text-base leading-relaxed flex-1">
                 Simulates railway ticket booking with structured logic and file handling while improving understanding of real-world software flow.
               </p>
 
@@ -243,12 +244,12 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 pt-4 border-t border-white/5">
               <a
                 href="https://docs.google.com/document/d/19TAvniUwonVTeIZQRWYM_kSZZm5YXsdp44GdsrgbUjs/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-sm hover:scale-105 transition duration-300"
+                className="block w-full text-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-sm hover:scale-105 transition duration-300"
               >
                 View Project Documentation
               </a>
