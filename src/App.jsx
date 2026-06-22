@@ -160,36 +160,103 @@ export default function Portfolio() {
           Projects
         </h2>
 
-        <motion.div
-          whileHover={{ scale: 1.02, y: -5 }}
-          className="border border-white/10 bg-white/5 backdrop-blur-xl p-10 rounded-3xl hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition duration-500"
-        >
-          <h3 className="text-2xl font-bold">
-            Railway Management System
-          </h3>
-
-          <p className="opacity-70 mt-5 text-lg leading-relaxed">
-            Simulates railway ticket booking with structured logic and
-            file handling while improving understanding of real-world
-            software flow.
-          </p>
-
-          <ul className="text-sm opacity-60 mt-6 list-disc ml-5 space-y-2">
-            <li>Learned file handling and structured programming</li>
-            <li>Improved understanding of real-world system flow</li>
-          </ul>
-
-          <a
-            href="https://docs.google.com/document/d/19TAvniUwonVTeIZQRWYM_kSZZm5YXsdp44GdsrgbUjs/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-8 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold hover:scale-105 transition duration-300"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Project 1: Student Performance Predictor */}
+          <motion.div
+            whileHover={{ scale: 1.02, y: -5 }}
+            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] transition duration-500 flex flex-col justify-between"
           >
-            View Project
-          </a>
-        </motion.div>
-      </section>
+            <div>
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center">
+                <img 
+                  src="/student-performance.jpg" 
+                  alt="Student Performance Predictor" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback background color if image isn't placed in public/ folder yet
+                    e.target.style.display = 'none';
+                  }}
+                />
+              </div>
 
+              <h3 className="text-2xl font-bold text-cyan-400">
+                Student Performance Predictor
+              </h3>
+
+              <p className="opacity-70 mt-4 text-base leading-relaxed">
+                Developed an end-to-end machine learning application that predicts student math scores using demographic and academic indicators. Built a preprocessing pipeline, trained a Random Forest Regression model using Scikit-learn, and deployed the application using Streamlit Cloud.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["Python", "Pandas", "Scikit-learn", "Streamlit", "Joblib", "Git"].map((tech) => (
+                  <span key={tech} className="text-xs font-medium px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex gap-4 mt-8">
+              <a
+                href="https://github.com/suvomsonal2020-rgb/StudentPerformancePredictor" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold text-sm hover:scale-105 transition duration-300"
+              >
+                GitHub Repo
+              </a>
+              <a
+                href="https://studentperformancepredictor-szbc8jkagv69ukdrsxmjky.streamlit.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-4 py-3 rounded-full border border-white/20 backdrop-blur-xl font-semibold text-sm hover:bg-white/10 transition duration-300"
+              >
+                Live Demo
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Project 2: Railway Management System */}
+          <motion.div
+            whileHover={{ scale: 1.02, y: -5 }}
+            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] transition duration-500 flex flex-col justify-between"
+          >
+            <div>
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-purple-900/40 to-cyan-900/40 border border-white/10 flex items-center justify-center">
+                <span className="text-sm opacity-40">Console Application</span>
+              </div>
+
+              <h3 className="text-2xl font-bold text-purple-400">
+                Railway Management System
+              </h3>
+
+              <p className="opacity-70 mt-4 text-base leading-relaxed">
+                Simulates railway ticket booking with structured logic and file handling while improving understanding of real-world software flow.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["Python", "File Handling", "Logic Building"].map((tech) => (
+                  <span key={tech} className="text-xs font-medium px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="https://docs.google.com/document/d/19TAvniUwonVTeIZQRWYM_kSZZm5YXsdp44GdsrgbUjs/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold text-sm hover:scale-105 transition duration-300"
+              >
+                View Project Documentation
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
       {/* Coding Profiles */}
       <section className="py-28 px-6">
         <h2 className="text-4xl font-bold mb-14 text-center">
