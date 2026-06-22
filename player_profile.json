@@ -1,0 +1,9 @@
+{
+    "alias": "zuvi",
+    "cred": 100,
+    "ram_capacity": 4,
+    "hardware": "Basic Deck",
+    "current_node": "ICE_BREAKER",
+    "max_ram": 4,
+    "current_ram": 4
+}
