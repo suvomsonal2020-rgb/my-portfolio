@@ -209,7 +209,7 @@ export default function Portfolio() {
 
             <div className="flex gap-4 mt-8 pt-4 border-t border-white/10">
               <a
-                href="https://github.com/suvomsonal2020-rgb/my-portfolio" 
+                href="https://github.com/suvomsonal2020-rgb/StudentPerformancePredictor" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 text-center font-mono tracking-wide px-4 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold text-sm hover:scale-[1.03] transition duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)]"
