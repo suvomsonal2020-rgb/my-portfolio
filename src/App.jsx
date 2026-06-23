@@ -176,16 +176,16 @@ export default function Portfolio() {
             className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] transition duration-500 flex flex-col justify-between"
           >
             <div>
-              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-white/5 border border-white/10 flex items-center justify-center">
-                <img 
-                  src="/student-performance.jpg" 
-                  alt="Student Performance Predictor" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                  }}
-                />
-              </div>
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 bg-black/40 border border-white/10 flex items-center justify-center p-2">
+               <img 
+                 src="/student-performance.jpg" 
+                 alt="Student Performance Predictor" 
+                 className="w-full h-full object-contain" // Changed from object-cover
+                 onError={(e) => {
+                  e.target.style.display = 'none';
+                 }}
+               />
+             </div>
 
               <h3 className="text-2xl font-bold text-cyan-400">
                 Student Performance Predictor
@@ -206,7 +206,7 @@ export default function Portfolio() {
 
             <div className="flex gap-4 mt-8">
               <a
-                href="https://github.com/suvomsonal2020-rgb/my-portfolio" 
+                href="https://github.com/suvomsonal2020-rgb/StudentPerformancePredictor" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 text-center px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold text-sm hover:scale-105 transition duration-300"
@@ -483,12 +483,96 @@ export default function Portfolio() {
 
       {/* Contact Section */}
       <section className="py-28 px-6 text-center font-mono">
-        <h2 className="text-4xl font-bold mb-8 text-cyan-400">
+        <h2 className="text-4xl font-bold mb-12 text-cyan-400">
           Terminal_Comm
         </h2>
-        <div className="space-y-4 text-lg opacity-70">
-          <p>suvomsonal2020@gmail.com</p>
-          <p>+91 9999328867</p>
+
+        {/* Terminal Card Window */}
+        <div 
+          className={
+            dark 
+              ? "w-full max-w-2xl mx-auto text-sm bg-black/60 border border-white/10 rounded-2xl shadow-[0_0_40px_rgba(34,211,238,0.1)] overflow-hidden backdrop-blur-xl text-left"
+              : "w-full max-w-2xl mx-auto text-sm bg-white/70 border border-slate-200 rounded-2xl shadow-xl overflow-hidden backdrop-blur-xl text-left"
+          }
+        >
+          {/* Terminal Title Bar */}
+          <div className={`flex items-center justify-between px-4 py-3 border-b ${dark ? 'bg-white/5 border-white/10' : 'bg-slate-100 border-slate-200'}`}>
+            <div className="flex items-center space-x-2">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+            </div>
+            <span className={`text-[10px] tracking-wider uppercase select-none ${dark ? 'text-slate-500' : 'text-slate-400'}`}>
+              bash — contact.json
+            </span>
+            <div className="w-10"></div>
+          </div>
+
+          {/* Terminal Workspace */}
+          <div className="p-6 space-y-4">
+            {/* Active Command Input Line */}
+            <div className="flex items-center space-x-2 flex-wrap text-xs md:text-sm">
+              <span className="text-cyan-400 font-bold">suvom@system</span>
+              <span className={dark ? "text-white/40" : "text-slate-400"}>~</span>
+              <span className="text-purple-400">cat</span>
+              <span className={dark ? "text-white" : "text-slate-800"}>contact.json</span>
+            </div>
+
+            {/* Static JSON Stream Output */}
+            <pre 
+              className={
+                dark
+                  ? "pl-4 text-cyan-300/90 border-l border-white/10 select-all overflow-x-auto whitespace-pre text-xs md:text-sm bg-white/[0.02] py-3 rounded-lg font-mono"
+                  : "pl-4 text-blue-600 border-l border-slate-200 select-all overflow-x-auto whitespace-pre text-xs md:text-sm bg-slate-50 py-3 rounded-lg font-mono"
+              }
+            >
+{`{
+  "identity": "Suvom Sonal Pati",
+  "environment": "AI / ML Aspirant",
+  "status": "Active // Seeking Internships 2026",
+  "vectors": {
+    "email": "suvomsonal2020@gmail.com",
+    "comms": "+91 9999328867"
+  }
+}`}
+            </pre>
+
+            {/* Terminal Actions Line */}
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="flex items-center space-x-2 text-xs md:text-sm">
+                <span className="text-cyan-400 font-bold">suvom@system</span>
+                <span className={dark ? "text-white/40" : "text-slate-400"}>~</span>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <button 
+                  onClick={() => {
+                    navigator.clipboard.writeText("suvomsonal2020@gmail.com");
+                    alert("Email copied system channel!");
+                  }}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
+                    dark 
+                      ? 'bg-white/5 hover:bg-white/10 text-white/80 border border-white/10' 
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200'
+                  }`}
+                >
+                  📥 Copy_Email
+                </button>
+
+                <a 
+                  href="mailto:suvomsonal2020@gmail.com"
+                  className={`px-3 py-1.5 rounded-xl text-xs font-mono transition-all duration-300 flex items-center gap-1 ${
+                    dark 
+                      ? 'bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/20' 
+                      : 'bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-100'
+                  }`}
+                >
+                  ↗ Open_Mail
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
