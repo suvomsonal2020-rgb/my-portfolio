@@ -447,6 +447,26 @@ export default function Portfolio() {
         <div className="space-y-8 max-w-4xl mx-auto">
           <motion.div
             whileHover={{ y: -5 }}
+            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] transition duration-500"
+          >
+            <h3 className="text-xl font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+              &gt;_ Intro to Programming - Kaggle
+            </h3>
+            <p className={`text-xs font-mono mt-2 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+              Domain: Algorithmic Logic & Data Foundations
+            </p>
+            <a
+              href="https://www.kaggle.com/suvomsonalpati/certificates" // Links directly to your Kaggle profile certificates tab
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-xs font-mono text-amber-400 hover:text-amber-300 hover:underline"
+            >
+              [Decrypt Certificate Link]
+            </a>
+          </motion.div>
+          
+          <motion.div
+            whileHover={{ y: -5 }}
             className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition duration-500"
           >
             <h3 className="text-xl font-mono font-semibold text-cyan-400">
