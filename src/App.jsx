@@ -495,6 +495,26 @@ export default function Portfolio() {
               [Decrypt Certificate Link]
             </a>
           </motion.div>
+
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_30px_rgba(168,85,247,0.25)] transition duration-500"
+          >
+            <h3 className="text-xl font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+              &gt;_ Complete AI & Machine Learning Masterclass - Udemy
+            </h3>
+            <p className={`text-xs font-mono mt-2 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+              Verification ID: UC-a47956dd-6989-4654-88f8-44ee12e3f0c0
+            </p>
+            <a
+              href="https://www.udemy.com/certificate/UC-a47956dd-6989-4654-88f8-44ee12e3f0c0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-xs font-mono text-purple-400 hover:text-purple-300 hover:underline"
+            >
+              [Decrypt Certificate Link]
+            </a>
+          </motion.div>
         </div>
       </section>
 
