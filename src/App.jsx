@@ -478,6 +478,23 @@ export default function Portfolio() {
               [Decrypt Certificate Link]
             </a>
           </motion.div>
+
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="border border-white/10 bg-white/5 backdrop-blur-xl p-8 rounded-3xl hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition duration-500"
+          >
+            <h3 className="text-xl font-mono font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+              &gt;_ Problem Solving (Basic) - HackerRank
+            </h3>
+            <a
+              href="https://www.hackerrank.com/certificates/17a0b4f1318b" // 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-xs font-mono text-cyan-400/80 hover:text-cyan-400 hover:underline"
+            >
+              [Decrypt Certificate Link]
+            </a>
+          </motion.div>
         </div>
       </section>
 
